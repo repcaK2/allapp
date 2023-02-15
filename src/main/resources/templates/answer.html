@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Welcome</title>
+  <style>
+        body{
+            background-color: #3e1251
+        }
+        .back{
+            width:800px;
+            height:100px;
+            background-color:#1c0924;
+            float:left;
+            margin-left:93px;
+            margin-top: 560px;
+            color: white;
+            font-size:60px;
+            text-align: center;
+            padding-top:20px;
+        }
+        .odp{
+        text-align:center;
+        font-size: 50px;
+        margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+<div class="odp"><h1 th:text="'Answer: ' + ${result} "></h1></div></br></br></br></br></br></br>
+<a href="/calculator"><div class="back">Go back to calculator</div></a>
+<a href="/allapp"><div class="back">Go back to all application</div></a>
+</body>
+</html>

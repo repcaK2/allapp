@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+    <style>
+      body{
+        background-color: #3e1251
+      }
+      .maincal{
+        text-align: center;
+      }
+
+      .text{
+        font-size:120px;
+        color:rgb(134, 61, 223)
+      }
+      .var{
+        width:20%;
+        font-size:50px;
+        color:blueviolet
+      }
+    </style>
+</head>
+<body>
+  <form action="/answer" method="post">
+    <div class="maincal">
+      <h1 class="text">Give the numbers</h1></br>
+      <input class="var" type="text" name="var1" value=""></br></br></br>
+      <input class="var" type="text" name="var2" value=""></br></br></br>
+      <select name="operation">
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+        <option value="divide">Divide</option>
+        <option value="multiply">Multiply</option>
+      </select></br></br>
+      <input type="submit" value="Send">
+    </div>
+  </form>
+</body>
+</html>
