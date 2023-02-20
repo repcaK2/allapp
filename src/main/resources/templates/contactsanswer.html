@@ -2,22 +2,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Lista kontaktów</title>
+    <script>
+        function reloadPage() {
+            location.reload();
+        }
+    </script>
 </head>
 <body>
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Imię</th>
-        <th>Nazwisko</th>
-        <th>Numer telefonu</th>
-    </tr>
-    <tr>
-        <td th:text="${contact.id}"></td>
-        <td th:text="${contact.name}"></td>
-        <td th:text="${contact.surname}"></td>
-        <td th:text="${contact.number}"></td>
-    </tr>
-</table>
+<form action="/contactsedit" method="post">
+    <label>Name</label></br>
+    <input type="text" class="form-control" id="wqewq" name="name" th:value="${contact.name}"></br>
+    <label>Surname</label></br>
+    <input type="text" class="form-control" id="surname" name="surname" th:value="${contact.surname}"></br>
+    <label>Phone Number</label></br>
+    <input type="text" class="form-control" id="number" name="number" th:value="${contact.number}"></br>
+    <input hidden th:value="${contact.id}" name="id"/>
+    <button type="submit" class="btn btn-primary" onclick="reloadPage()">EDIT</button>
+</form>
 <a href="/contactsform">back</a>
 
 </body>
